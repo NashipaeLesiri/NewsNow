@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Melisa</string>
+    <string name="title_activity_layout">Layout</string>
+    <string name="title_activity_layout2">LayoutActivity2</string>
+</resources>
