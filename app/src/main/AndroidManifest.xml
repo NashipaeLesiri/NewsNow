@@ -13,6 +13,31 @@
         android:theme="@style/Theme.Melisa"
         tools:targetApi="31">
         <activity
+            android:name=".ExploreActivity"
+            android:exported="false"
+            android:label="@string/title_activity_explore"
+            android:theme="@style/Theme.Melisa" />
+        <activity
+            android:name=".DestinationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_destination"
+            android:theme="@style/Theme.Melisa" />
+        <activity
+            android:name=".FormActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_form2"
+            android:theme="@style/Theme.Melisa" />
+        <activity
+            android:name=".IntentActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_intent2"
+            android:theme="@style/Theme.Melisa" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.Melisa" />
+        <activity
             android:name=".LayoutActivity2"
             android:exported="false"
             android:label="@string/title_activity_layout2"

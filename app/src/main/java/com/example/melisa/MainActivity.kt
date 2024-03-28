@@ -1,5 +1,6 @@
 package com.example.melisa
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -27,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -62,14 +64,16 @@ fun Demo(){
         Text(text = "Android software development is the process by which applications are created for devices running the Android operating system. ")
 
         Spacer(modifier = Modifier.height(10.dp))
-
+        val mContext = LocalContext.current
         Column(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(onClick = {})
-            { Text("See More") }
+            Button(onClick = {
+                mContext.startActivity(Intent(mContext,DestinationActivity::class.java))
+            })
+            { Text("Destination") }
         }
 
         Text(
@@ -134,7 +138,9 @@ fun Demo(){
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = {
+                         mContext.startActivity(Intent(mContext,LayoutActivity2::class.java))
+        },
             shape = RoundedCornerShape(5.dp),
             colors = ButtonDefaults.buttonColors(Color.Magenta),
             modifier = Modifier

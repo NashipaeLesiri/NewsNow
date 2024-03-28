@@ -2,4 +2,9 @@
     <string name="app_name">Melisa</string>
     <string name="title_activity_layout">Layout</string>
     <string name="title_activity_layout2">LayoutActivity2</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_intent2">IntentActivity2</string>
+    <string name="title_activity_form2">FormActivity2</string>
+    <string name="title_activity_destination">DestinationActivity</string>
+    <string name="title_activity_explore">ExploreActivity</string>
 </resources>
