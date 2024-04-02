@@ -154,6 +154,19 @@ fun Layout(){
             Text(text = "Continue")
 
         }
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,LottieActivity::class.java))
+
+        },
+            shape = RoundedCornerShape(5.dp),
+            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 30.dp, end = 30.dp)
+        ) {
+            Text(text = "Animation")
+
+        }
 
 
     }
