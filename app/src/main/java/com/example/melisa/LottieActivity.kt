@@ -64,7 +64,7 @@ fun MyLottie(){
             fontSize = 30.sp)
         Spacer(modifier = Modifier.height(10.dp))
         Button(onClick = {
-            mContext.startActivity(Intent(mContext,IntentActivity2::class.java))
+            mContext.startActivity(Intent(mContext,WoofActivity::class.java))
 
         },
             shape = RoundedCornerShape(5.dp),

@@ -13,6 +13,17 @@
         android:theme="@style/Theme.Melisa"
         tools:targetApi="31">
         <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="Melisa"
+            android:theme="@style/Theme.Melisa">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+            </activity>
+        <activity
             android:name=".LottieActivity"
             android:exported="false"
             android:label="@string/title_activity_lottie"
@@ -59,15 +70,11 @@
             android:theme="@style/Theme.Melisa" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Melisa">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"
+            android:label="MainActivity"
+            android:theme="@style/Theme.Melisa" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>

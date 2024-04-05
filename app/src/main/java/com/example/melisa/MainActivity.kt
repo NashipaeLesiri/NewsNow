@@ -24,6 +24,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,7 +38,10 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.melisa.ui.theme.MelisaTheme
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +57,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Demo(){
     
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center) {
         Text(
             text = "Welcome to Android",
             color = Color.Magenta,
@@ -76,20 +83,6 @@ fun Demo(){
             { Text("Destination") }
         }
 
-        Text(
-            text = "Types of cars",
-            fontSize = 20.sp,
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.Magenta)
-                .height(30.dp),
-            textAlign = TextAlign.Center,
-            textDecoration = TextDecoration.Underline,
-            color = Color.White,
-            fontWeight = FontWeight.Bold)
-        Text(text = "1.BMW")
-        Text(text = "2.Mercedes Benz")
-        Text(text = "3.Toyota")
 
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -101,7 +94,14 @@ fun Demo(){
             fontStyle = FontStyle.Italic,
             fontWeight = FontWeight.Bold)
 
-        Text(text = "Android operating system is the largest installed base among various mobile platforms across the globe. Hundreds of millions of mobile devices are powered by Android in more than 190 countries of the world.")
+        //Lottie Animation
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.android))
+        val progress by animateLottieCompositionAsState(composition)
+        LottieAnimation(composition, progress,
+            modifier = Modifier.size(100.dp)
+        )
+
+
 
         Spacer(modifier = Modifier.height(10.dp))
 
