@@ -45,40 +45,8 @@ class LottieActivity : ComponentActivity() {
 
 @Composable
 fun MyLottie(){
-    val mContext = LocalContext.current
-    Column (
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ){
-        //Lottie Animation
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.contact))
-        val progress by animateLottieCompositionAsState(composition)
-        LottieAnimation(composition, progress,
-            modifier = Modifier.size(300.dp)
-        )
-        Spacer(modifier = Modifier.height(10.dp))
-        Text(
-            text = "Plan your next trip",
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 30.sp)
-        Spacer(modifier = Modifier.height(10.dp))
-        Button(onClick = {
-            mContext.startActivity(Intent(mContext,WoofActivity::class.java))
-
-        },
-            shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 30.dp, end = 30.dp)
-        ) {
-            Text(text = "Continue")
-
-        }
 
 
-    }
 
 }
 

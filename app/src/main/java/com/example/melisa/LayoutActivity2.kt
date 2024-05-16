@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -63,7 +64,7 @@ fun Layout(){
         //TopAppBar
         TopAppBar(
             title = { Text(text = "Home", color = Color.White)},
-            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Magenta),
+            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Cyan ),
             navigationIcon = {
                 IconButton(onClick = {
 
@@ -97,24 +98,25 @@ fun Layout(){
         Spacer(modifier = Modifier.height(5.dp))
 
         Text(
-            text = "K-DRAMAS I LOVE",
+            text = "TRENDING TOPICS TODAY",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.fillMaxWidth(),
             textAlign = TextAlign.Center)
-
+LazyColumn {
+    item {
         //Row 1
         Row {
-            Image(painter = painterResource(id = R.drawable.nokdu),
-                contentDescription = "nokdu",
+            Image(painter = painterResource(id = R.drawable.rus),
+                contentDescription = "null",
                 modifier = Modifier.size(width = 200.dp, height = 200.dp)
             )
             Column {
                 Text(
-                    text = "Tale of Nokdu",
+                    text = "Russia lost a huge amount of troops in a single week",
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp)
-                Text(text = "When a swordsman's family gets attacked by a group of female assassins, he adopts the disguise of a woman and sets out in pursuit of the truth.")
+                Text(text = "On May 12, Newsweek’s Ellie Cook reported Moscow lost 8,030 troops and 79 tanks in the fighting that had occurred over the previous seven days of fighting on the frontlines")
             }
 
         }
@@ -122,22 +124,41 @@ fun Layout(){
         Spacer(modifier = Modifier.height(20.dp))
         //Row 2
         Row {
-            Image(painter = painterResource(id = R.drawable.samdalri),
-                contentDescription = "samdalri",
+            Image(painter = painterResource(id = R.drawable.tax),
+                contentDescription = "null",
                 modifier = Modifier.size(width = 200.dp, height = 200.dp)
             )
             Column {
                 Text(
-                    text = "Welcome to Samdalri",
+                    text = "More Pain as Ruto promises to increase Tax",
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp)
-                Text(text = "After suffering a fall from grace, a photographer returns to her hometown and bumps into her childhood friend, rekindling an unfinished romance.")
+                Text(text = "Azimio has urged Members of Parliament to reject the Finance Bill 2024, which is up for discussion, citing draconian taxation measures that will escalate the cost of living and plunge Kenyans into poverty"
+
+                )
             }
 
         }
         //End of Row 2
-        Spacer(modifier = Modifier.height(20.dp))
+
         //Row 3
+        Row {
+            Image(painter = painterResource(id = R.drawable.well),
+                contentDescription = "null",
+                modifier = Modifier.size(width = 200.dp, height = 200.dp)
+            )
+            Column {
+                Text(
+                    text = "Promoting employees' financial wellness during difficult times",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp)
+                Text(text = " It is paramount that employers recognise the importance of supporting their employees' financial wellness amidst these circumstances."
+
+                )
+            }
+
+        }
+        Spacer(modifier = Modifier.height(20.dp))
         val mContext = LocalContext.current
         //End of Row 3
         Spacer(modifier = Modifier.height(10.dp))
@@ -146,27 +167,18 @@ fun Layout(){
 
         },
             shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            colors = ButtonDefaults.buttonColors(Color.Cyan),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 30.dp)
         ) {
-            Text(text = "Continue")
+            Text(text = "Subscribe to get access to different articles")
 
         }
-        Button(onClick = {
-            mContext.startActivity(Intent(mContext,LottieActivity::class.java))
+    }
+}
 
-        },
-            shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 30.dp, end = 30.dp)
-        ) {
-            Text(text = "Animation")
 
-        }
 
 
     }

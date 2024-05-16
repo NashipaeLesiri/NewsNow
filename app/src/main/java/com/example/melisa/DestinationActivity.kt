@@ -50,7 +50,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.melisa.ui.theme.MelisaTheme
+//import com.example.melisa.ui.theme.MelisaTheme
 
 class DestinationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,7 +68,7 @@ fun Destination(){
         val mContext = LocalContext.current
         TopAppBar(
             title = { Text(text = "Destination", color = Color.White)},
-            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Magenta),
+            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Blue),
             navigationIcon = {
                 IconButton(onClick = {
 

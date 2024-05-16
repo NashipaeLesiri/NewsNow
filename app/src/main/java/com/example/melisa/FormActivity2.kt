@@ -48,7 +48,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.melisa.ui.theme.MelisaTheme
+
 
 class FormActivity2 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,7 +65,7 @@ fun MyForm(){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .paint(painterResource(id = R.drawable.bg), contentScale = ContentScale.FillBounds)) {
+            .paint(painterResource(id = R.drawable.news), contentScale = ContentScale.FillBounds)) {
 
         var firstname by remember { mutableStateOf("") }
         var lastname by remember { mutableStateOf("") }
@@ -174,7 +174,7 @@ fun MyForm(){
 
         },
             shape = RoundedCornerShape(5.dp),
-            colors = ButtonDefaults.buttonColors(Color.Magenta),
+            colors = ButtonDefaults.buttonColors(Color.Blue),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 30.dp)

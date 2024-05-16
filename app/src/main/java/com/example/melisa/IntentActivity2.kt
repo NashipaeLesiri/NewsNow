@@ -71,8 +71,8 @@ fun MyIntents(){
 
         //TopAppBar -displays information and actions relating to the current screen and is placed at the top of the screen.
         TopAppBar(
-            title = { Text(text = "Home", color = Color.White)},
-            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Magenta),
+            title = { Text(text = "Get Started", color = Color.White)},
+            colors = TopAppBarDefaults.mediumTopAppBarColors(Color.Blue),
             navigationIcon = {
                 IconButton(onClick = {
                     mContext.startActivity(Intent(mContext,MainActivity::class.java))
@@ -127,7 +127,7 @@ fun MyIntents(){
             shape = CutCornerShape(5.dp),
             border = BorderStroke(3.dp, Color.Black)
         ) {
-            Text(text = "PAY VIA MPESA")
+            Text(text = "SUBSCRIBE TO GET PREMIUM ARTILES")
 
         }
 
@@ -137,9 +137,9 @@ fun MyIntents(){
         Button(onClick = {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"
-            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("melisakabaa123@gmail.com"))
+            shareIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("Nashipaelesiri@gmail.com"))
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "subject")
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Hello, this is the email body")
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "I have an inquiry towards the subcription")
             mContext.startActivity(shareIntent)
         },
             modifier = Modifier
@@ -195,8 +195,8 @@ fun MyIntents(){
         //SMS
         Button(onClick = {
             val smsIntent=Intent(Intent.ACTION_SENDTO)
-            smsIntent.data="smsto:0720245837".toUri()
-            smsIntent.putExtra("sms_body","Hello Glory,how was your day?")
+            smsIntent.data="smsto:0791759877".toUri()
+            smsIntent.putExtra("sms_body","What are the subscription packages?")
             mContext.startActivity(smsIntent)
         },
             modifier = Modifier

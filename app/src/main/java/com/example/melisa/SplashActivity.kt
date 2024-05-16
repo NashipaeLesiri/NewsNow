@@ -61,7 +61,7 @@ class SplashActivity : ComponentActivity() {
 fun MySplash(){
     Column(modifier = Modifier
         .fillMaxSize()
-        .paint(painterResource(id = R.drawable.bg), contentScale = ContentScale.FillBounds),
+        .paint(painterResource(id = R.drawable.news), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
 
@@ -71,7 +71,7 @@ fun MySplash(){
                 contentDescription = "shop",
                 Modifier.size(80.dp))
             Text(
-                text = "Shopify",
+                text = "NewsNow",
                 fontSize = 50.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.ExtraBold,
@@ -80,7 +80,13 @@ fun MySplash(){
 
         }
 
+        Text(
+            text = "Experience News Differently",
+            fontSize = 25.sp,
+            color = Color.Black,
+            fontWeight = FontWeight.Thin,
 
+            )
 
 
 
